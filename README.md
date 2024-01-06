@@ -7,4 +7,3 @@ Our client is an Insurance company that has provided Health Insurance to its cus
 Data Description
 We have a dataset which contains information about demographics (gender, age, region code type), Vehicles (Vehicle Age, Damage), Policy (Premium, sourcing channel) etc. related to a person who is interested in vehicle insurance. We have 381109 data points available.
 
-Feature Name	Type	Description
