@@ -1,82 +1,17 @@
 # Health_Insurance_Customer_Interest_prediction
+***
+Predicting whether a customer would be interested in buying Vehicle Insurance so that the company can then accordingly plan its communication strategy to reach out to those customers and optimise its business model and revenue.
+***
+###Abstract:
+### Abstract:
 
-## Introduction
-This repository contains the code and documentation for predicting customer interest in health insurance. The goal is to determine whether a customer is interested in health insurance based on various demographic and historical data.
+An insurance policy is an arrangement by which a company undertakes to provide a guarantee of compensation for specified loss, damage, illness, or death in return for the payment of a specified premium. There are multiple factors that play a major role in capturing customers for any insurance policy. Here we have information about demographics such as age, gender, region code, and vehicle damage, vehicle age, annual premium, policy sourcing channel. Based on the previous trend, this data analysis and prediction with machine learning models can help us understand what are the reasons for news popularity on social media and obtain the best classification model.
+###Problem Statement: 
 
-## Data Overview
-The dataset consists of customer information with features such as gender, age, driving license status, region code, vehicle information, and annual premium. The target variable is "Response," indicating customer interest in health insurance.
+### Problem Statement: 
 
-### Data Description
-- **id:** Unique ID for the customer
-- **Gender:** Gender of the customer
-- **Age:** Age of the customer
-- **Driving_License:** 0: Customer does not have DL, 1: Customer already has DL
-- **Region_Code:** Unique code for the region of the customer
-- **Previously_Insured:** 1: Customer already has Vehicle Insurance, 0: Customer doesn't have Vehicle Insurance
-- **Vehicle_Age:** Age of the Vehicle
-- **Vehicle_Damage:** 1: Customer got their vehicle damaged in the past, 0: Customer didn't get their vehicle damaged in the past.
-- **Annual_Premium:** The amount the customer needs to pay as premium in the year
-- **Policy_Sales_Channel:** Anonymized Code for the channel of outreaching to the customer
-- **Vintage:** Number of days the customer has been associated with the company
-- **Response:** 1: Customer is interested, 0: Customer is not interested
+Our client is an Insurance company that has provided Health Insurance to its customers now they need your help in building a model to predict whether the policyholders (customers) from past year will also be interested in Vehicle Insurance provided by the company. An insurance policy is an arrangement by which a company undertakes to provide a guarantee of compensation for specified loss, damage, illness, or death in return for the payment of a specified premium. A premium is a sum of money that the customer needs to pay regularly to an insurance company for this guarantee. For example, you may pay a premium of Rs. 5000 each year for a health insurance cover of Rs. 200,000/- so that if, God forbid, you fall ill and need to be hospitalised in that year, the insurance provider company will bear the cost of hospitalisation etc. for upto Rs. 200,000. Now if you are wondering how can company bear such high hospitalisation cost when it charges a premium of only Rs. 5000/-, that is where the concept of probabilities comes in picture. For example, like you, there may be 100 customers who would be paying a premium of Rs. 5000 every year, but only a few of them (say 2-3) would get hospitalised that year and not everyone. This way everyone shares the risk of everyone else. Just like medical insurance, there is vehicle insurance where every year customer needs to pay a premium of certain amount to insurance provider company so that in case of unfortunate accident by the vehicle, the insurance provider company will provide a compensation (called ‘sum assured’) to the customer. Building a model to predict whether a customer would be interested in Vehicle Insurance is extremely helpful for the company because it can then accordingly plan its communication strategy to reach out to those customers and optimise its business model and revenue. Now, in order to predict, whether the customer would be interested in Vehicle insurance, you have information about demographics (gender, age, region code type), Vehicles (Vehicle Age, Damage), Policy (Premium, sourcing channel) etc..
+### Data Description:
 
-## Data Exploration and Analysis
-
-### Data Preprocessing
-- Imported necessary packages.
-- Extracted and checked the information of the data.
-- Checked for null values (no null values found).
-- Obtained basic statistics of the data.
-- Checked the data types.
-
-### Exploratory Data Analysis (EDA)
-- Dropped the 'id' column as it is unique and not needed for analysis.
-- Explored the distribution of categorical variables (Response, Gender, Driving_License, Region_Code, etc.).
-- Utilized visualizations (count plots, correlation heatmap, pair plots) to gain insights into the relationships between variables.
-
-### Feature Engineering
-- Encoded categorical variables using label encoding.
-
-## Model Development
-
-### Model Evaluation Results
-| Algorithm Name         | Training Accuracy | Testing Accuracy | Precision Score | F1-score |
-|------------------------|-------------------|------------------|-----------------|----------|
-| Logistic Regression    | 0.876564          | 0.880927         | 0.000000        | 0.000000 |
-| Decision Tree          | 0.999905          | 0.824972         | 0.282686        | 0.293716 |
-| Random Forest          | 0.876564          | 0.880927         | 0.000000        | 0.000000 |
-| K-nearest Neighbours   | 0.878368          | 0.877804         | 0.382178        | 0.076542 |
-
-### Model Selection
-Considering precision score and overall performance, K-nearest Neighbors (KNN) is chosen as the ideal model for predicting customer interest in health insurance.
-
-## Model Deployment
-- Saved the KNN model using joblib for future predictions.
-- Loaded the saved KNN model.
-- Extracted and preprocessed new data for predictions.
-- Made predictions on the new data to determine customer interest.
-
-## Conclusion
-This project successfully explores, analyzes, and predicts customer interest in health insurance based on provided data. The chosen K-nearest Neighbors model demonstrates promising results for predicting customer behavior.
-
-The end-to-end process includes data exploration, feature engineering, model development, evaluation, selection, deployment, and prediction on new data. This comprehensive approach ensures the model's practical applicability in real-world scenarios.
-
-### Definitions and Significance of Each Algorithm
-
-#### Logistic Regression
-- **Definition:** A statistical model that uses the logistic function to model the probability of a binary outcome.
-- **Significance:** Often used for binary classification problems, logistic regression provides probabilities and is interpretable.
-
-#### Decision Tree
-- **Definition:** A tree-like model where an internal node represents a feature, the branch represents a decision rule, and each leaf node represents the outcome.
-- **Significance:** Decision trees are interpretable and can capture complex relationships in the data, but may be prone to overfitting.
-
-#### Random Forest
-- **Definition:** An ensemble learning method that constructs a multitude of decision trees at training time and outputs the mode of the classes.
-- **Significance:** Reduces overfitting compared to individual decision trees and often provides robust performance.
-
-#### K-nearest Neighbors (KNN)
-- **Definition:** A non-parametric method used for classification and regression, where an object is classified based on the majority class of its k-nearest neighbors.
-- **Significance:** Simple and intuitive, KNN can be effective for small to medium-sized datasets and is sensitive to local patterns.
-
+We have a dataset which contains information about demographics (gender, age, region code type), Vehicles (Vehicle Age, Damage), Policy (Premium, sourcing channel) etc. related to a person who is interested in vehicle insurance. We have 381109 data points available.
 
